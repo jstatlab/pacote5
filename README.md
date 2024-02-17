@@ -8,6 +8,24 @@
 [![R-CMD-check](https://github.com/jstatlab/pacote5/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jstatlab/pacote5/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/jstatlab/pacote5/branch/master/graph/badge.svg)](https://app.codecov.io/gh/jstatlab/pacote5?branch=master)
+![GitHub commit
+activity](https://img.shields.io/github/commit-activity/m/jstatlab/pacote5)
+![GitHub language
+count](https://img.shields.io/github/languages/count/jstatlab/pacote5)
+![GitHub top
+language](https://img.shields.io/github/languages/top/jstatlab/pacote5)
+![GitHub code size in
+bytes](https://img.shields.io/github/languages/code-size/jstatlab/pacote5)
+![GitHub repo
+size](https://img.shields.io/github/repo-size/jstatlab/pacote5) ![GitHub
+watchers](https://img.shields.io/github/watchers/jstatlab/pacote5)
+![GitHub forks](https://img.shields.io/github/forks/jstatlab/pacote5)
+![GitHub R package version (subdirectory of
+monorepo)](https://img.shields.io/github/r-package/v/jstatlab/pacote5)
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![DOI:10.1016/j.rser.2023.113990](https://img.shields.io/badge/DOI-10.1016/j.rser.2023.113990-FAB70C?logo=DOI&colorIcon.svg)](https://doi.org/10.1016/j.rser.2023.113990)
+[![ORCiD:0000-0001-7414-1154](https://img.shields.io/badge/ORCiD-0000--0001--7414--1154-A6CE39?logo=ORCID&colorIcon.svg)](https://orcid.org/0000-0001-7414-1154)
 <!-- badges: end -->
 
 The goal of pacote5 is to …
