@@ -1,0 +1,50 @@
+---
+title: "pacote5"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{pacote5}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Anexar pacote ao caminho de busca
+
+```{r setup}
+library(pacote5)
+```
+
+
+## Exponential Smoothing
+
+```{r}
+set.seed(1000)
+y <- cumsum(rnorm(1e6))
+ys <- exp_smooth(y, 0.8)
+plot(y, col = "grey80")
+lines(ys, col = "red")
+```
+
+
+## Mutual Information
+
+```{r}
+set.seed(1000)
+m <- matrix(rnorm(1e6), nrow = 1000)
+mutual_information(m)
+```
+
+
+
+
+
+
+
+
+
