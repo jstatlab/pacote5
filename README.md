@@ -28,45 +28,43 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![ORCiD:0000-0001-7414-1154](https://img.shields.io/badge/ORCiD-0000--0001--7414--1154-A6CE39?logo=ORCID&colorIcon.svg)](https://orcid.org/0000-0001-7414-1154)
 <!-- badges: end -->
 
-The goal of pacote5 is to …
+O objetivo deste pacote é demonstrar como construir um pacote com
+códigos em C e Rcpp.
 
 ## Installation
 
-You can install the development version of pacote5 like so:
+You can install the development version of pacote5 like so: Como você
+pode obter a versão em desenvolvimento do pacote? Basta chamar a função
+a seguir:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+# install.packages("pacote5")
+pak::pak("jstatlab/pacote5")
 ```
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
+## Anexar pacote
 
 ``` r
 library(pacote5)
-## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+## Exponential Smoothing
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+set.seed(1000)
+y <- cumsum(rnorm(1e6))
+ys <- exp_smooth(y, 0.8)
+plot(y, col = "grey80")
+lines(ys, col = "red")
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
-You can also embed plots, for example:
+## Mutual Information
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+``` r
+set.seed(1000)
+m <- matrix(rnorm(1e6), nrow = 1000)
+mutual_information(m)
+#> [1] -3.157255
+```

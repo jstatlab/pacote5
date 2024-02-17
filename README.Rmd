@@ -31,37 +31,41 @@ knitr::opts_chunk$set(
 [![ORCiD:0000-0001-7414-1154](https://img.shields.io/badge/ORCiD-0000--0001--7414--1154-A6CE39?logo=ORCID&colorIcon.svg)](https://orcid.org/0000-0001-7414-1154)
 <!-- badges: end -->
 
-The goal of pacote5 is to ...
+O objetivo deste pacote é demonstrar como construir um pacote com códigos
+em C e Rcpp.
 
 ## Installation
 
 You can install the development version of pacote5 like so:
+Como você pode obter a versão em desenvolvimento do pacote? Basta chamar a função a seguir:
 
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+```r
+# install.packages("pacote5")
+pak::pak("jstatlab/pacote5")
 ```
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
+## Anexar pacote
 
 ```{r example}
 library(pacote5)
-## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
 
-```{r cars}
-summary(cars)
+## Exponential Smoothing
+
+```{r}
+set.seed(1000)
+y <- cumsum(rnorm(1e6))
+ys <- exp_smooth(y, 0.8)
+plot(y, col = "grey80")
+lines(ys, col = "red")
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
 
-You can also embed plots, for example:
+## Mutual Information
 
-```{r pressure, echo = FALSE}
-plot(pressure)
+```{r}
+set.seed(1000)
+m <- matrix(rnorm(1e6), nrow = 1000)
+mutual_information(m)
 ```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
